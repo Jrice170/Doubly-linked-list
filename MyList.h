@@ -31,7 +31,7 @@ class Node
         Node<T> *m_prev;
         Node<T> *m_next;
 
-        // Helps you make a dummy node
+        // Helps you make a dummy/sentinel/junk node
         Node(Node<T> *in_prev, Node<T> *in_next): 
             m_prev(in_prev), m_next(in_next){}
 
