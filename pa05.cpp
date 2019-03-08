@@ -1,7 +1,7 @@
 /* Sample tester
  * We've included std::list below to show you how your types should behave.
  * You can use that for debugging.
- * Add the -g flag if you want to use GDB like we learned in lab this week.
+ * Add the -g flag if you want to use gdb or cgdb
  */
 
 // Use this to test, but not for your actual program.
