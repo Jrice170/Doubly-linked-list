@@ -13,8 +13,6 @@ Only add source files (not compiled files) to the Git repository.
 Thoroughly read the syllabus sections on "Programming assignments" and "Grading".
 These sections give good tips, tricks, hints, and instructions for programming assignments, including how to submit via Git.
 
-https://web.mst.edu/~taylorpat/Courses_files/DataStructures/Syllabus.html
-
 ## Assignment description
 Mimic the std::list behavior with your arraylist.
 You must use a doubly linked list.
@@ -26,7 +24,7 @@ General container library information
 * http://www.cplusplus.com/reference/stl/
 
 List
-* https://en.cppreference.com/w/cpp/container/list (This wiki the most “official”, but still unofficial, source of C++ knowledge for end-programmers)
+* https://en.cppreference.com/w/cpp/container/list (This wiki the most "official", but still unofficial, source of C++ knowledge for end-programmers)
 * http://www.cplusplus.com/reference/list/list/ (This may also help, but if these links differ, go with en.cppreference.com instead)
 
 Overloading operator syntax
@@ -37,7 +35,7 @@ Given only indirectly this time.
 Use the std::list to check.
 
 ## Grading
-100% of this assignment will be graded based on the successful implementation of the functions in the header file using unit testing, and the correct output of main.
+100% of this assignment will be graded based on the successful implementation of the functions in the header file using unit testing.
 Each function's performance on its own unit test will be worth a certain subset of those points, and the output of main will as well.
 
 ## Due date

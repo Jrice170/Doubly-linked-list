@@ -1,7 +1,9 @@
 /* Clean and simple version of the doubly linked std::list
  * This is your h file. Do not edit it!
  * If you want to know what the functions do,
- * read the links in the assignment description from en.cppreference.
+ * Read the links in the assignment description from en.cppreference.
+ * Make sure to test your list with multiple types: (e.g., int, char, long, etc.)
+ * Check both books to see which one has a similar implementation you can use as your guide!
  */ 
 
 #ifndef MYLIST_H
@@ -12,14 +14,12 @@ using std::cout;
 using std::endl;
 using std::cin;
 using std::cerr;
+using std::string;
 
 /* 
-Writes to a string array containing: 
-    * the your (the student author’s) Campus Username (at index 0) 
-    * and Student ID# (at index 1). 
-Takes as input a pre-existing length-2 string array. 
+* Same username function!
 */
-void get_identity(std::string my_id[]);
+void get_identity(std::string &my_id);
 
 
 template <typename T>
@@ -30,6 +30,10 @@ class Node
 
         Node<T> *m_prev;
         Node<T> *m_next;
+
+        // Helps you make a dummy node
+        Node(Node<T> *in_prev, Node<T> *in_next): 
+            m_prev(in_prev), m_next(in_next){}
 
         Node(const T &x, Node<T> *in_prev, Node<T> *in_next): 
             m_element(x), m_prev(in_prev), m_next(in_next){}
@@ -49,6 +53,7 @@ class MyList
         // A list size of 0 will have 1 sentinel node.
         MyList();
 
+        // Use removall from the class code as your guide!
         ~MyList();
 
         MyList<T> & operator=(const MyList<T> &source);
@@ -61,7 +66,7 @@ class MyList
 
         void assign(int count, const T &value);
 
-        // Default list size of 0, with one sentinel node, as above.
+        // Default list size of 0, with one sentinel node, as above in constructor
         void clear();
 
         void push_front(const T &x);
@@ -75,9 +80,11 @@ class MyList
         // Simplified version that only takes one int position.
         // Inserts before element at position i.
         // Not exactly like std::
+        // You do NOT need a special case for 0-big lists (i.e., no if size == 0).
         void insert(int i, const T &x);
 
         // Removes all elements in list that are equal to value. 
+        // You do NOT need a special case for 0-big lists (i.e., no if size == 0).
         void remove(T value);
         
         // Removes element at position i.
