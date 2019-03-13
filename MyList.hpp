@@ -313,7 +313,7 @@ void MyList<T>::pop_front()
 }
 
 
-template <typename T>
+/*template <typename T>
 void MyList<T>::Display_all()
 {
   Node<T> * track = m_sentinel;
@@ -327,7 +327,7 @@ void MyList<T>::Display_all()
   }
   cout<<endl;
 
-}
+}*/
 template <typename T>
 void MyList<T>::reverse()
 {
