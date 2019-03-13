@@ -30,19 +30,19 @@ MyList<T>::~MyList()
           delete_pointer->m_next->m_prev = m_sentinel;
           /// the next pointer to semtinel equal to the none deleted node
           m_sentinel->m_next = delete_pointer->m_next;
-          delete [] delete_pointer;
+          delete  delete_pointer;
           delete_pointer = m_sentinel->m_next;
 
         }
 
       }
-      delete [] m_sentinel; // base node
+      delete  m_sentinel; // base node
 
     }
     else
     {
 
-      delete [] m_sentinel; // base node
+      delete m_sentinel; // base node
 
     }
 
@@ -133,7 +133,7 @@ void MyList<T>::clear()
 
         remove->m_next->m_prev = m_sentinel;
         m_sentinel->m_next = remove->m_next;
-        delete [] remove;
+        delete  remove;
         remove = m_sentinel->m_next;
     }
     m_sentinel->m_next = nullptr;
@@ -231,7 +231,7 @@ void MyList<T>::remove(T value)
               Delete = Target;
               Delete->m_next->m_prev = Delete->m_prev;
               Delete->m_prev->m_next = Delete->m_next;
-              delete [] Delete;
+              delete Delete;
               Target = Target->m_next;
               // remove that node
               m_size--;
@@ -266,7 +266,7 @@ void MyList<T>::erase(int i)
     }
     Tracker->m_next->m_prev = Tracker->m_prev;
     Tracker->m_prev->m_next = Tracker->m_next;
-    delete [] Tracker;
+    delete Tracker;
     m_size--;
 }
 
@@ -296,7 +296,7 @@ void MyList<T>::pop_back()
     Node<T> * Delete = m_sentinel->m_prev;
     m_sentinel->m_prev = Delete->m_prev;
     Delete->m_prev->m_next = m_sentinel;
-    delete [] Delete;
+    delete  Delete;
     m_size--;
 
 }
@@ -307,13 +307,13 @@ void MyList<T>::pop_front()
     Node<T> * Delete = m_sentinel->m_next;
     m_sentinel->m_next = Delete->m_next;
     Delete->m_next->m_prev = m_sentinel;
-    delete [] Delete;
+    delete Delete;
     m_size--;
 
 }
 
 
-/*template <typename T>
+template <typename T>
 void MyList<T>::Display_all()
 {
   Node<T> * track = m_sentinel;
@@ -327,7 +327,7 @@ void MyList<T>::Display_all()
   }
   cout<<endl;
 
-}*/
+}
 template <typename T>
 void MyList<T>::reverse()
 {
