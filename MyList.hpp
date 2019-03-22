@@ -211,6 +211,12 @@ void MyList<T>::insert(int i, const T &x)
 
 
     }
+    if(size() == 0)
+    {
+
+        push_back(x);
+
+    }
 
 }
 
@@ -328,6 +334,7 @@ void MyList<T>::Display_all()
   cout<<endl;
 
 }*/
+
 template <typename T>
 void MyList<T>::reverse()
 {
